@@ -13,8 +13,5 @@
     "prettier": "prettier --write .",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
-  "bun-create": {
-    "start": "echo 'Start!'",
-    "post-install": "echo 'Done! 🎉'"
-  }
+  "bun-create": {}
 }
