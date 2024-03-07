@@ -1,0 +1,10 @@
+{
+  "name": "shared-heap",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prettier": "latest",
+    "typescript": "latest"
+  }
+}
