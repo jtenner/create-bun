@@ -12,5 +12,8 @@
     "start": "bun prettier && bun prettier-watach",
     "prettier": "prettier --write .",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
+  },
+  "bun-create": {
+    "post-install": "echo 'Done! 🎉'"
   }
 }
