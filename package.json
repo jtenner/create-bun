@@ -13,9 +13,7 @@
     "zod": "latest"
   },
   "scripts": {
-    "start": "bun prettier && bun prettier-watch",
-    "prettier": "prettier --write .",
-    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
+    "start": "exit 0"
   },
   "bun-create": {
     "postinstall": [
