@@ -65,6 +65,11 @@ ${license}
 await $`echo ${license} > LICENSE`;
 await $`echo ${readme} > readme.md`;
 
+// setup husky
+await $`echo "bun test" > .husky/pre-commit`;
+await $`echo "bunx prettier --write ." >> .husky/pre-commit`;
+
+// push the git repo
 await $`git add --all .`;
 await $`git commit -m "Initial commit"`;
 
