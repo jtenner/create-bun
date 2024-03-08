@@ -10,8 +10,8 @@ await $`rm post-init.ts`;
 await $`bunx husky init`;
 
 // get the username and email
-const username = (await $`git config --global user.name`.then(e => e.text())).trim();
-const email = (await $`git config --global user.email`.then(e => e.text())).trim();
+const username = (await $`git config --global user.name`.quiet().then(e => e.text()).trim();
+const email = (await $`git config --global user.email`.quiet().then(e => e.text())).trim();
 const year = new Date().getFullYear();
 
 // Create MIT license
@@ -64,6 +64,7 @@ ${license}
 // setup the git repository
 await $`echo ${license} > LICENSE`;
 await $`echo ${readme} > readme.md`;
+await $`mkdir src`;
 await $`echo "" > src/index.ts`;
 // setup husky
 await $`echo "bun test" > .husky/pre-commit`;
