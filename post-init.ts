@@ -4,7 +4,7 @@ const { path } = import.meta;
 const folderName = basename(path);
 
 // delete the post-install script
-await $`rm post-install.ts`;
+await $`rm post-init.ts`;
 
 // initialize husky
 await $`bunx husky --init`;
