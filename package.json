@@ -10,6 +10,7 @@
     "husky": "latest"
   },
   "dependencies": {
+    "type-fest": "latest",
     "zod": "latest"
   },
   "scripts": {
