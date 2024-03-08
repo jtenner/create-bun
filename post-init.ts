@@ -64,7 +64,7 @@ ${license}
 // setup the git repository
 await $`echo ${license} > LICENSE`;
 await $`echo ${readme} > readme.md`;
-
+await $`echo "" > src/index.ts`;
 // setup husky
 await $`echo "bun test" > .husky/pre-commit`;
 await $`echo "bunx prettier --write ." >> .husky/pre-commit`;
