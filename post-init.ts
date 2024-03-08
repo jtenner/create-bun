@@ -13,5 +13,5 @@ await $`bunx husky init`;
 await $`git add --all .`;
 await $`git commit -m "Initial commit"`;
 const username = await $`git config --global user.name`.then(e => e.text());
-await $`git remote add origin https://github.com/${username}/${folderName}.git`;
+await $`git remote add origin https://github.com/${username.trim()}/${folderName}.git`;
 await $`git push -u origin master`;
