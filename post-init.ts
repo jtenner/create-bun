@@ -1,7 +1,7 @@
 import { $ } from "bun";
 import { basename } from "path";
 const { path } = import.meta;
-const folderName = basename(path);
+const folderName = dirname(path);
 
 // delete the post-install script
 await $`rm post-init.ts`;
