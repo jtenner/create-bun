@@ -1,7 +1,7 @@
 import { $ } from "bun";
-import { dirname } from "path";
+import { dirname, basename } from "path";
 const { path } = import.meta;
-const folderName = dirname(path);
+const folderName = basename(dirname(path));
 
 // delete the post-install script
 await $`rm post-init.ts`;
@@ -40,6 +40,8 @@ SOFTWARE.
 `;
 
 const readme = `# ${folderName}
+
+This is a project! Or something...
 
 ## Installation
 
