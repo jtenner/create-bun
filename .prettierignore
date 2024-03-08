@@ -1,9 +1,6 @@
 lib
 node_modules
 package.json
-lib
-node_modules
-package.json
 .prettierrc
 readme.md
 tsconfig.json
