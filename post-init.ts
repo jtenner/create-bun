@@ -65,14 +65,15 @@ ${license}
 await $`echo ${license} > LICENSE`;
 await $`echo ${readme} > readme.md`;
 await $`mkdir src`;
-await $`echo "" > src/index.ts`;
+await $`echo -n "" > src/index.ts`;
+await $`echo -n "" > src/index.spec.ts`;
 // setup husky
 await $`echo "bun test" > .husky/pre-commit`;
 await $`echo "bunx prettier --write ." >> .husky/pre-commit`;
 
 // push the git repo
-await $`git add --all .`;
-await $`git commit -m "Initial commit"`;
+await $`git add --all .`.quiet();
+await $`git commit -m "Initial commit@"`.quiet();
 
-await $`git remote add origin https://github.com/${username.trim()}/${folderName}.git`;
+await $`git remote add origin https://github.com/${username}/${folderName}.git`;
 await $`git push -u origin master`;
