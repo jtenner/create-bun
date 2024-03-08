@@ -7,7 +7,7 @@ const folderName = basename(path);
 await $`rm post-init.ts`;
 
 // initialize husky
-await $`bunx husky --init`;
+await $`bunx husky init`;
 
 // setup the git repository
 await $`git add --all .`;
