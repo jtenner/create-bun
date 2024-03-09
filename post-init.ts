@@ -77,5 +77,4 @@ await $`git add --all .`.quiet();
 await $`git commit -m "Initial commit@"`.quiet();
 
 await $`git remote remove origin`;
-await $`git remote add origin "${giturl}"`;
-await $`git push -u origin master`;
+await $`gh repo create ${folderName} --private --source=. --remote=upstream`;
