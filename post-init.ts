@@ -73,10 +73,10 @@ await $`echo "bun test" > .husky/pre-commit`;
 await $`echo "bunx prettier --write ." >> .husky/pre-commit`;
 
 // push the git repo
-await $`git add --all .`.quiet();
-await $`git commit -m "Initial commit@"`.quiet();
+// await $`git add --all .`.quiet();
+// await $`git commit -m "Initial commit@"`.quiet();
 
-await $`git remote remove origin`;
-await $`gh repo create ${folderName} --private --source=. --remote=upstream`;
-await $`git remote add origin "${giturl}"`;
-await $`git push origin master`;
+// await $`git remote remove origin`;
+// await $`gh repo create ${folderName} --private --source=. --remote=upstream`;
+// await $`git remote add origin "${giturl}"`;
+// await $`git push origin master`;
